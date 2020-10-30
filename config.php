@@ -11,6 +11,6 @@
 
 
 	define ('ROOT_PATH', realpath(dirname(__FILE__)));
-	define('BASE_URL', 'http://qozeemblog.localhost/');
+	define('BASE_URL', 'https://qozeemblog.herokuapp.com/');
 ?>
 
