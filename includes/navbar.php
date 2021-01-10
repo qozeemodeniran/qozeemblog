@@ -4,9 +4,9 @@
 				<a href="index.php"><h1>Qozeem's Blog</h1></a>
 			</div>
 			<ul>
-			  <li><a class="active" href="http://qozeemblog.localhost/index.php">Home</a></li>
+			  <li><a class="active" href="https://qozeemblog.herokuapp.com/">Home</a></li>
 			  <!-- <li><a href="https://qozeemblog.herokuapp.com/news.php">News</a></li> -->
-			  <li><a href="http://qozeemblog.localhost/contact.php">Contact</a></li>
-			  <li><a href="http://qozeemblog.localhost/about.php">About</a></li>
+			  <li><a href="https://qozeemblog.herokuapp.com//contact.php">Contact</a></li>
+			  <li><a href="https://qozeemblog.herokuapp.com//about.php">About</a></li>
 			</ul>
 </div>
