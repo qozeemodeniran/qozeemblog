@@ -11,9 +11,6 @@
 
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
 
-<!-- Google Adsensce script -->
-<script data-ad-client="ca-pub-6248120957683859" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
 	<title>Qozeem's Blog | Home Page </title>
 
 </head>

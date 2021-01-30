@@ -4,8 +4,8 @@
 
 	// connect to database
 	$conn = mysqli_connect("us-cdbr-east-02.cleardb.com", "b80503685742be", "f29aaf6a", "heroku_f56cc8dd3618c46");
-	
 
+	
     if (!$conn) {
     	die("Failed database connection" . mysqli_connect_error());
     }
