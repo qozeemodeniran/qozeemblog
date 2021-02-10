@@ -39,6 +39,9 @@
 					</thead>
 					<tbody>
 					<?php foreach ($posts as $key => $post): ?>
+					<?php echo $query = mysql_query(" UPDATE posts 
+									SET views = views + 1 
+									WHERE id = '$id' "); ?>
 						<tr>
 							<td><?php echo $key + 1; ?></td>
 							<td>
@@ -48,11 +51,8 @@
 								</a>
 							</td>
 							<td><?php echo $post['author_name']; ?></td>
-							<td>
-							    <?php echo $query = mysql_query(" UPDATE posts 
-									SET views = views + 1 
-									WHERE id = '$id' "); ?>	
-								<?php echo $post['view'];?>
+							<td>	
+								<?php echo $post['views'];?>
 							</td>
 							
 							<!-- Only Admin can publish/unpublish post -->
