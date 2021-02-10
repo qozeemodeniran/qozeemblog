@@ -49,10 +49,10 @@
 							</td>
 							<td><?php echo $post['author_name']; ?></td>
 							<td>
-							    <?php $query = mysql_query(" UPDATE posts 
+							    <?php echo $query = mysql_query(" UPDATE posts 
 									SET views = views + 1 
-									WHERE id = '$id' "); ?>
-								<?php echo $post['views'];?>	
+									WHERE id = '$id' "); ?>	
+								<?php echo $post['view'];?>
 							</td>
 							
 							<!-- Only Admin can publish/unpublish post -->
