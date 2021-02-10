@@ -49,7 +49,7 @@
 							</td>
 							<td><?php echo $post['author_name']; ?></td>
 							<td>
-								<?php gt_set_post_view(); ?>	
+								<?php echo $post['views']?>	
 							</td>
 							
 							<!-- Only Admin can publish/unpublish post -->
