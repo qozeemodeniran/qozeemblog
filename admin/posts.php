@@ -49,7 +49,9 @@
 							</td>
 							<td><?php echo $post['author_name']; ?></td>
 							<td>
-							<?php echo $post['views']; ?></td>
+							<?php echo $query = mysqli_query(" UPDATE posts SET views + 1 WHERE id = '$id' ");?>
+							<?php echo $post['views'];?>
+							</td>
 							
 							<!-- Only Admin can publish/unpublish post -->
 							<?php if ($_SESSION['user']['role'] == "Admin" ): ?>
