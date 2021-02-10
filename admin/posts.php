@@ -41,7 +41,7 @@
 					<?php foreach ($posts as $key => $post): ?>
 						<tr>
 							<td><?php echo $key + 1; ?></td>
-							<td><?php echo $post['author']; ?></td>
+							<td><?php echo $post['title']; ?></td>
 							<td>
 								<a 	target="_blank"
 								href="<?php echo BASE_URL . 'single_post.php?post-slug=' . $post['slug'] ?>">
