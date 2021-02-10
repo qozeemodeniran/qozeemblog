@@ -53,8 +53,8 @@
 									if(mt_rand(1,$sample_rate) == 1) {
     								$query = mysql_query(" UPDATE posts SET views = views + {$sample_rate} WHERE id = '{$id}' ");
     								// execute query, etc
+									echo $post['views'];
 								}?>
-								<?php echo $post['views'];?>
 							</td>
 							
 							<!-- Only Admin can publish/unpublish post -->
