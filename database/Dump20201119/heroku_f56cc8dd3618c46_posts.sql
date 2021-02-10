@@ -35,7 +35,7 @@ CREATE TABLE `posts` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   UNIQUE KEY `slug` (`slug`),
-  KEY `user_id` (`user_id`)
+  KEY `user_id` (`user_id`),
 ) ENGINE=MyISAM AUTO_INCREMENT=172 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
