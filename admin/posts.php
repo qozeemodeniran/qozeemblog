@@ -48,7 +48,7 @@
 								</a>
 							</td>
 							<td><?php echo $post['author_name']; ?></td>
-							<td><?php echo $post['views']; ?></td>
+							<td><?php echo count($post['views']); ?></td>
 							
 							<!-- Only Admin can publish/unpublish post -->
 							<?php if ($_SESSION['user']['role'] == "Admin" ): ?>
