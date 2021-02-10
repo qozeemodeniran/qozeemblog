@@ -13,7 +13,7 @@
 <?php include( ROOT_PATH . '/includes/navbar.php') ?>
 
 <!-- Page Content -->
-<div class="content"><br><br>
+<!-- <div class="content"><br><br>
 	<i>Qozeem's Blog was</i> inspired by the <strong>Wejapa Internships</strong> final project. The blog is a platform you can get the most detailed stories ranging from <i>motivation, inspiration</i> and tech solutions.
 	<br><br><br>
 	<h1>Wejapa Internships</h1>
@@ -21,7 +21,7 @@
 	<hr>
 	<h1>Qozeem Odeniran</h1>
 	<p>Agile Computer Science graduate from University of Ilorin,Ilorin Nigeria. Skilled in HTML5, CSS3, JAVASCRIPT, PHP, MYSQL DATABASES, SQL, PYTHON, JAVA, ANDROID STUDIO, VCS(GITHUB). Currently works as a <i>Software Developer Intern</i> at <strong>Parmz Digital Technologies</strong> Lagos, Nigeria. <br> See <a href="https://qozeemodeniran.github.io/" target="_blank">Portfolio</a> to know more about <b>Qozeem Odeniran.</b></p>
-</div>
+</div> -->
 
 <!-- footer -->
 <?php include( ROOT_PATH . '/includes/footer.php') ?>

@@ -49,12 +49,7 @@
 							</td>
 							<td><?php echo $post['author_name']; ?></td>
 							<td>
-								<?php $sample_rate = 100;
-									if(mt_rand(1,$sample_rate) == 1) {
-    								$query = mysql_query(" UPDATE posts SET views = views + {$sample_rate} WHERE id = '{$id}' ");
-    								// execute query, etc
-									echo $post['views'];
-								}?>
+								<?php gt_set_post_view(); ?>	
 							</td>
 							
 							<!-- Only Admin can publish/unpublish post -->
