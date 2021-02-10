@@ -49,6 +49,7 @@
 							</td>
 							<td><?php echo $post['author_name']; ?></td>
 							<td>
+								<?php $query = mysql_query(" UPDATE posts SET views + 1 WHERE id = $post[id] "); ?>
 								<?php echo $post['views']?>	
 							</td>
 							
