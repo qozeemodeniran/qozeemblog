@@ -38,9 +38,6 @@
 						<th><small>Delete</small></th>
 					</thead>
 					<tbody>
-					<?php echo $query = mysql_query(" UPDATE posts 
-									SET views = views + 1 
-									WHERE id = '$id' "); ?>
 					<?php foreach ($posts as $key => $post): ?>
 					
 						<tr>
