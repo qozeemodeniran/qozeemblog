@@ -47,8 +47,7 @@
 									<?php echo $post['title']; ?>	
 								</a>
 							</td>
-							<td><?php echo $post['author']; ?></td>
-							
+							<td><?php echo $post['username']; ?></td>
 							<td><?php echo $post['views']; ?></td>
 							
 							<!-- Only Admin can publish/unpublish post -->
