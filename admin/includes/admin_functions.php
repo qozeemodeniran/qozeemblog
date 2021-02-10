@@ -299,11 +299,11 @@ function gt_set_post_view() {
     update_post_meta( $post_id, $key, $count );
 }
 function gt_posts_column_views( $columns ) {
-    $columns['posts'] = 'Views';
+    $columns['views'] = 'Views';
     return $columns;
 }
 function gt_posts_custom_column_views( $column ) {
-    if ( $column === 'posts') {
+    if ( $column === 'views') {
         echo gt_get_post_view();
     }
 }
