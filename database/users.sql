@@ -40,7 +40,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (102,'qodeniran','muhdqozeem@gmail.com','Admin','2c599bc73385c4085f268d8d8a3292b3','2020-11-08 05:23:33','2020-11-08 05:23:33');
+INSERT INTO `users` VALUES (1,'qozeemodeniran','muhdqozeem@gmail.com','Admin','lastborn231','2020-11-08 05:23:33','2020-11-08 05:23:33');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
