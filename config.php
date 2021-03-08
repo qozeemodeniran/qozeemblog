@@ -3,12 +3,18 @@
 	session_start();
 
 	// connect to database
-	$conn = mysqli_connect("us-cdbr-east-02.cleardb.com", "b80503685742be", "f29aaf6a", "heroku_f56cc8dd3618c46");
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+	$server = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$db = substr($url["path"], 1);
 
-	
-    if (!$conn) {
-    	die("Failed database connection" . mysqli_connect_error());
-    }
+	$config = array(
+		'host' => $server ,
+		'user' => $username ,
+		'pw' => $password,
+		'db' => $db 
+	);
 
 
 	define ('ROOT_PATH', realpath(dirname(__FILE__)));
