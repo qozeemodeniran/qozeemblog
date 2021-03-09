@@ -13,4 +13,13 @@
 <body>
     <!-- admin navbar -->
 	<?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
+
+    <div>
+        <form action="" method="post">
+            <label for="logo">
+            Upload Logo: <br>
+                <input type="file">
+            </label>
+        </form>
+    </div>
 </body>
