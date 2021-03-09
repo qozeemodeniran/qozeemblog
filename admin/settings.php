@@ -16,36 +16,55 @@
 
     <div>
         <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
-        <form method="post" enctype="multipart/form-data" action="settings.php" >
+        <form method="post" enctype="multipart/form-data" action="" >
 
-            <!-- validation errors for the form -->
+                <!-- validation errors for the form -->
 				<?php include(ROOT_PATH . '/includes/errors.php') ?>
 
-            <!-- if editing user, the id is required to identify that user -->
-            <?php if ($isEditingUser === true): ?>
-                <input type="hidden" name="admin_id" value="<?php echo $admin_id; ?>">
-            <?php endif ?>
+				<!-- if editing user, the id is required to identify that user -->
+				<?php if ($isEditingUser === true): ?>
+					<input type="hidden" name="admin_id" value="<?php echo $admin_id; ?>">
+				<?php endif ?>
+
 
             Choose a logo:
-            <input type="file" name="file">
-            <input type="submit" value="Upload" name="Submit1"> <br/>
+            <input type="file" 
+                name="uploadfile" 
+                value="" 
+            /> 
+            <div> 
+                <button type="submit"
+                        name="upload"> 
+                  UPLOAD 
+                </button> 
+            </div> 
+            <?php error_reporting(0); ?>
+            <?php 
+            $msg="";
 
-            <?php
-                if(isset($_POST['Submit1']))
-                { 
-                $filepath = "C:/qozeemodeniran/heroku_projects/qozeemblog/static/images/" . $_FILES["file"]["name"];
-
-                if(move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) 
-                {
-                echo "<img src=".$filepath." height=200 width=300 />";
+                if (isset($_POST['upload'])) { 
+  
+                    $filename = $_FILES["uploadfile"]["name"]; 
+                    $tempname = $_FILES["uploadfile"]["tmp_name"];     
+                        $folder = "image/".$filename; 
+                          
+                    $db = mysqli_connect("us-cdbr-east-03.cleardb.com", "b5a8056a6aa74f", "b5a8056a6aa74f", "heroku_e6dc99b8c0a5bb2"); 
+                  
+                        // Get all the submitted data from the form 
+                        $sql = "INSERT INTO image (filename) VALUES ('$filename')"; 
+                  
+                        // Execute query 
+                        mysqli_query($db, $sql); 
+                          
+                        // Now let's move the uploaded image into the folder: image 
+                        if (move_uploaded_file($tempname, $folder))  { 
+                            $msg = "Image uploaded successfully"; 
+                        }else{ 
+                            $msg = "Failed to upload image"; 
+                      } 
                 } 
-                else 
-                {
-                echo "Error !!";
-                }
-                } 
+                  $result = mysqli_query($db, "SELECT * FROM image"); 
             ?>
-
             <input type="text" name="email" value="" placeholder="Email">
             <input type="text" name="phone" value="" placeholder="Phone nUmber">
 
