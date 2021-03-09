@@ -26,16 +26,12 @@
                 <input type="hidden" name="admin_id" value="<?php echo $admin_id; ?>">
             <?php endif ?>
 
-            <input type="file" name="logo" > Choose a logo
+            Choose a logo:
+            <input type="file" name="logo">
             <input type="text" name="email" value="" placeholder="Email">
             <input type="text" name="phone" value="" placeholder="Phone nUmber">
 
-            <!-- if editing user, display the update button instead of create button -->
-				<?php if ($isEditingUser === true): ?> 
-					<button type="submit" class="btn" name="update_admin">UPDATE</button>
-				<?php else: ?>
-					<button type="submit" class="btn" name="create_admin">Save User</button>
-				<?php endif ?>
+            <button type="submit" class="btn" name="update_admin">UPDATE</button>
         </form>
     </div>
 </body>
