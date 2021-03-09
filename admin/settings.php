@@ -15,10 +15,19 @@
 	<?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
 
     <div>
+    <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
         <form action="" method="post">
             <label for="logo">
             Upload Logo: <br>
                 <input type="file">
+            </label>
+            <label for="email">
+                Email: <br>
+                <input type="text">
+            </label>
+            <label for="phone">
+            Phone Number: <br>
+                <input type="text">
             </label>
         </form>
     </div>
