@@ -14,7 +14,6 @@
     <!-- admin navbar -->
 	<?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
 
-    <div>
     <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
         <form action="" method="post">
             <label for="logo">
@@ -35,5 +34,4 @@
 
             <input type="submit" value="Update">
         </form>
-    </div>
 </body>
