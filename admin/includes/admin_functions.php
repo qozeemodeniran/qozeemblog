@@ -286,4 +286,5 @@ function deleteTopic($topic_id) {
 	}
 }
 
+
 ?>

@@ -16,7 +16,7 @@
 
     <div>
         <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
-        <form method="post" action="">
+        <form method="post" enctype="multipart/form-data" action="settings.php" >
 
             <!-- validation errors for the form -->
 				<?php include(ROOT_PATH . '/includes/errors.php') ?>
@@ -28,6 +28,24 @@
 
             Choose a logo:
             <input type="file" name="logo">
+            <input type="submit" value="Upload" name="Submit1"> <br/>
+
+            <?php
+                if(isset($_POST['Submit1']))
+                { 
+                $filepath = "images/" . $_FILES["file"]["name"];
+
+                if(move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) 
+                {
+                echo "<img src=".$filepath." height=200 width=300 />";
+                } 
+                else 
+                {
+                echo "Error !!";
+                }
+                } 
+            ?>
+
             <input type="text" name="email" value="" placeholder="Email">
             <input type="text" name="phone" value="" placeholder="Phone nUmber">
 
