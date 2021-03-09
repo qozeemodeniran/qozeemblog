@@ -27,7 +27,7 @@
             <?php endif ?>
 
             Choose a logo:
-            <input type="file" name="logo">
+            <input type="file" name="file">
             <input type="submit" value="Upload" name="Submit1"> <br/>
 
             <?php
