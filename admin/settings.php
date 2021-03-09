@@ -18,17 +18,22 @@
     <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
         <form action="" method="post">
             <label for="logo">
-            Upload Logo: <br>
+            Upload Logo: 
                 <input type="file">
             </label>
+            <br>
             <label for="email">
-                Email: <br>
+                Email: 
                 <input type="text">
             </label>
+            <br>
             <label for="phone">
-            Phone Number: <br>
+            Phone Number: 
                 <input type="text">
             </label>
+            <br>
+
+            <input type="submit" value="Update">
         </form>
     </div>
 </body>
