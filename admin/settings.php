@@ -14,5 +14,8 @@
     <!-- admin navbar -->
 	<?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
 
-    <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
+    <div>
+        <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
+        
+    </div>
 </body>
