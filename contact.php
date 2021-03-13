@@ -2,7 +2,7 @@
 
 <!-- Defining variables for SEO -->
 <?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
-<?php $pageTitle="Qozeem Blog | Contact Us"?>
+<?php $pageTitle="Qozeem Blog | Contact Me"?>
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
 
 <!-- SOCIAL MEDIA LIBRARY -->
@@ -26,6 +26,7 @@
 
 <!-- Page Content -->
 <div class="content">
+	<h1 class="btn" style="text-align: center; width: 100%;">Meet Our Team</h1><br><br>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-12">
@@ -36,7 +37,7 @@
 						<p>Title: SOFTWARE DEVELOPER</p>
 						<p>Role: ADMIN</p>
 						<p>
-							<details>
+							<details open>
 								<summary>Social</summary>
 								<a href="https://www.facebook.com/qozeem.odeniran.18" class="fa fa-facebook"></a>
             					<a href="https://twitter.com/odeniranpikin" class="fa fa-twitter"></a>
@@ -54,7 +55,7 @@
 						<p>Title: CONTENT WRITER | TEACHER</p>
 						<p>Role: AUTHOR</p>
 						<p>
-							<details>
+							<details open>
 								<summary>Social</summary>
 								<a href="https://www.facebook.com/adro.kareem" class="fa fa-facebook"></a>
             					<a href="https://twitter.com/Adrokareem" class="fa fa-twitter"></a>
@@ -72,7 +73,7 @@
 						<p>Title: STUDENT | CONTENT WRITER</p>
 						<p>Role: AUTHOR</p>
 						<p>
-							<details>
+							<details open>
 								<summary>Social</summary>
 								<a href="https://www.facebook.com/ololadeayomikun.omoledun" class="fa fa-facebook"></a>
             					<a href="" class="fa fa-twitter"></a>
@@ -90,7 +91,7 @@
 						<p>Title: SOFTWARE DEVELOPER</p>
 						<p>Role: AUTHOR</p>
 						<p>
-							<details>
+							<details open>
 								<summary>Social</summary>
 								<a href="https://www.facebook.com/ganiyat.abdulazeez.39" class="fa fa-facebook"></a>
             					<a href="https://twitter.com/ganiyat_jummie" class="fa fa-twitter"></a>
@@ -108,7 +109,7 @@
 						<p>Title: REALTOR</p>
 						<p>Role: AUTHOR</p>
 						<p>
-							<details>
+							<details open>
 								<summary>Social</summary>
 								<a href="https://www.facebook.com/profile.php?id=100002392986162" class="fa fa-facebook"></a>
             					<a href="" class="fa fa-twitter"></a>
@@ -126,9 +127,8 @@
 						<p>Title: HR. MANAGER</p>
 						<p>Role: AUTHOR</p>
 						<p>
-							<details>
+							<details open>
 								<summary>Social</summary>
-								
 								<a href="https://www.facebook.com/omolara.afuwape.1" class="fa fa-facebook"></a>
             					<a href="https://twitter.com/a_omolaraeni" class="fa fa-twitter"></a>
             					<a href="https://www.instagram.com/omolaraeni.a/" class="fa fa-instagram"></a>

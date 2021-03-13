@@ -2,6 +2,10 @@
 
 <?php include('config.php'); ?>
 <?php include('includes/public_functions.php'); ?>
+
+<!-- Defining variables for SEO -->
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageTitle="Qozeem Blog"?>
 <?php include('includes/head_section.php'); ?>
 <?php 
 	// Get posts under a particular topic
@@ -10,7 +14,6 @@
 		$posts = getPublishedPostsByTopic($topic_id);
 	}
 ?>
-	<title>Qozeem'm Blog | Home </title>
 </head>
 <body>
 <div class="container">

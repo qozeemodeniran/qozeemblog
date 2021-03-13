@@ -16,6 +16,25 @@ a { text-decoration: none; }
 ul, ol { margin-left: 40px; }
 hr { margin: 10px 0px; opacity: .25; }
 
+/* ABOUT PAGE IMAGE POSITIONING */
+.half{
+	width: 45%;
+	height: 100%;
+	display: inline-block;
+	margin-right: 2%;
+	float: left;
+}
+
+.whole{
+	clear: both;
+}
+
+/* FONT AWESOME STYLING */
+.fa {
+	font-size: 20%;
+}
+
+
 /* FORM DEFAULTS */
 form h2 {
 	margin: 25px auto;
