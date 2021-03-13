@@ -7,8 +7,11 @@
 	}
 	$topics = getAllTopics();
 ?>
+
+<!-- Defining variables for SEO -->
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<title> <?php echo $post['title']; ?></title>
 <?php include('includes/head_section.php'); ?>
-<title> <?php echo $post['title'] ?> | Qozeem's Blog</title>
 </head>
 <body>
 <div class="container">

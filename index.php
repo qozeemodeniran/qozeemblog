@@ -9,11 +9,12 @@
 <!-- Retrieve all posts from database  -->
 <?php $posts = getPublishedPosts(); ?>
 
+<!-- Defining variables for SEO -->
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageTitle="Qozeem Blog | Home"?>
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
-
-	<title>Qozeem's Blog | Home Page </title>
-
 </head>
+
 <body>
 	<!-- container - wraps whole page -->
 	<div class="container">
@@ -31,7 +32,7 @@
 			<!-- more content still to come here ... -->
 			<?php foreach ($posts as $post): ?>
 			<div class="post" style="margin-left: 0px;">
-			<img src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="">
+			<img src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="post-image">
 
 			<!-- if statement that displays the topic -->
 			<?php if (isset($post['topic']['name'])): ?>
@@ -48,7 +49,8 @@
 					<h3><?php echo $post['title'] ?></h3>
 				<div class="info">
 					<span><?php echo date("F j, Y ", strtotime($post["created_at"])); ?></span>
-					
+					<br>
+					<span>Posted by: <?php  ?></span>
 					<span class="read_more">Read more...</span>
 				</div>
 				</div>

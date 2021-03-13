@@ -1,12 +1,15 @@
 <?php  include('../config.php'); ?>
 <?php  include('../includes/registration_login.php'); ?>
+
+<!-- Defining variables for SEO -->
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageTitle="Qozeem Blog | Password Reset"?>
 <?php  include('../includes/head_section.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Qozeem's Blog | Password Reset </title>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="../static/css/public_styling.css">
 </head>

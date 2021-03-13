@@ -1,8 +1,10 @@
 <?php require_once('config.php') ?>
 
+<!-- Defining variables for SEO -->
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageTitle="Qozeem Blog | Contact Us"?>
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
 
-<title>Qozeem's Blog | Contact Page </title>
 <!-- SOCIAL MEDIA LIBRARY -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 

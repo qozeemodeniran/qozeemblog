@@ -1,10 +1,10 @@
 <?php require_once('config.php') ?>
 
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageTitle="Qozeem Blog | Contact Us"?>
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
-
-<title>Qozeem's Blog | About Page </title>
-
 </head>
+
 <body>
 	<!-- container - wraps whole page -->
 	<div class="container">

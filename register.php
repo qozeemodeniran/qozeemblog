@@ -3,9 +3,10 @@
 <!-- Source code for handling registration and login -->
 <?php  include('includes/registration_login.php'); ?>
 
+<!-- Defining variables for SEO -->
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageTitle="Qozeem Blog | Sign up"?>
 <?php include('includes/head_section.php'); ?>
-
-<title>Qozeem's Blog | Sign up </title>
 </head>
 <body>
 <div class="container">

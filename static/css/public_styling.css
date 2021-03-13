@@ -114,7 +114,8 @@ form input:focus {
 	min-height: 400px;
 	color: white;
 	border-radius: 5px;
-	background-image: url('../images/banner.jpg');
+	background-image: url('/admin/./uploads/banner.jpg');
+	/* background-image: url('../images/banner.jpg'); */
 	background-size: 100% 100%;
 }
 .banner .welcome_msg {

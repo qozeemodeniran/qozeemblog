@@ -1,8 +1,11 @@
 
 <?php  include('config.php'); ?>
 <?php  include('includes/registration_login.php'); ?>
+
+<!-- Defining variables for SEO -->
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageTitle="Qozeem Blog | Sign in"?>
 <?php  include('includes/head_section.php'); ?>
-	<title>Qozeem's Blog | Sign in </title>
 </head>
 <body>
 <div class="container">
