@@ -10,6 +10,5 @@
 <meta charset="UTF-8">
 <meta name="description" content="<?php echo $pageDescription?>">
 <title><?php echo $pageTitle; ?></title>
-<!-- Google Adsensce script -->
-<script data-ad-client="ca-pub-6248120957683859" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-</script>
+<!-- Script for public area -->
+<script src="static/js/public_script.js"></script>

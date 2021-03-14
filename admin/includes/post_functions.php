@@ -43,7 +43,7 @@ function getPostAuthorById($user_id)
 	$sql = "SELECT username FROM users WHERE id=$user_id";
 	$result = mysqli_query($conn, $sql);
 	if ($result) {
-		// return username
+		// return username;
 		return mysqli_fetch_assoc($result)['username'];
 	} else {
 		return null;

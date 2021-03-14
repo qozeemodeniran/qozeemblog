@@ -48,7 +48,7 @@
 									<?php echo $post['title']; ?>	
 								</a>
 							</td>
-							<td><?php echo $post['author_name']; ?></td>
+							<td><?php echo $_SESSION['user']['username'];?></td>
 							<td>	
 								<?php echo $post['views'];?>
 							</td>

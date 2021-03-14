@@ -50,7 +50,7 @@
 				<div class="info">
 					<span><?php echo date("F j, Y ", strtotime($post["created_at"])); ?></span>
 					<br>
-					<span>Posted by: <?php  ?></span>
+					<span>Posted by: </span>
 					<span class="read_more">Read more...</span>
 				</div>
 				</div>
