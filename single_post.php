@@ -36,17 +36,9 @@
 			<br><br>
 
 			<!-- comments section -->
-			<input type="hidden" id="pid" value="999"/>
+			
 
-			<h1>COMMENTS</h1>
-			<div id="cwrap"></div>
-
-			<form id="cadd" onsubmit="return comments.add(this)">
-  				<h1>Leave a reply</h1>
-  				<input type="text" id="cname" placeholder="Name" required/>
-  				<textarea id="cmsg" placeholder="Message" required></textarea>
-  				<input type="submit" value="Post Comment"/>
-			</form>
+			
 		</div>
 		<!-- // Page wrapper -->
 

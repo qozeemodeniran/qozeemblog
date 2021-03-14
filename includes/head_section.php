@@ -10,5 +10,4 @@
 <meta charset="UTF-8">
 <meta name="description" content="<?php echo $pageDescription?>">
 <title><?php echo $pageTitle; ?></title>
-<!-- Script for public area -->
-<script src="static/js/public_script.js"></script>
+
