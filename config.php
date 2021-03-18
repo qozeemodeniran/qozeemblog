@@ -13,5 +13,5 @@
 	define ('ROOT_PATH', realpath(dirname(__FILE__)));
 	// define('BASE_URL', 'http://qozeem.blog/'); // virtual host url 
 
-	define('BASE_URL', 'https://qozeemblog.herokuapp.com//'); // heroku url
+	define('BASE_URL', 'https://qozeemblog.herokuapp.com/'); // heroku url
 ?>
