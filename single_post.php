@@ -8,12 +8,12 @@
 ?>
 
 <!-- Defining variables for SEO -->
-<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
-<title> <?php echo $post['title']; ?></title>
+<?php $pageDescription = htmlspecialchars($post['body']);?>
+<?php $pageTitle = $post['title']; ?>
 <?php include('includes/head_section.php'); ?>
 </head>
 <body>
-<div class="container">
+<div class="container"> 
 	<!-- Navbar -->
 		<?php include( ROOT_PATH . '/includes/navbar.php'); ?>
 	<!-- // Navbar -->
@@ -33,11 +33,8 @@
 			<?php endif ?>
 			</div>
 			<!-- // full post div -->
-			<br><br>
 
 			<!-- comments section -->
-			
-
 			
 		</div>
 		<!-- // Page wrapper -->

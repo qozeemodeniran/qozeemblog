@@ -17,15 +17,21 @@
     <div>
         <h1 style="text-align: center; margin-top: 20px;">Update Blog Info</h1>
         <form method="post" enctype="multipart/form-data" action="<?php echo BASE_URL . 'admin/upload.php'; ?>">
-            Update banner:
+            <!-- Update banner
+            <input type="file" name="fileToUpload1" id="fileToUpload1"> -->
+            <!-- <input class="btn" type="submit" value="Upload Banner" name="submit_banner"> -->
+            <br><br>
+            Update logo
             <input type="file" name="fileToUpload" id="fileToUpload">
-            <input class="btn" type="submit" value="Upload Image" name="submit_image">
-            <br><br> Update Email
+            <!-- <input class="btn" type="submit" value="Upload Logo" name="submit_logo"> -->
+            <br><br>
+            <input class="btn" type="submit" value="Update Settings" name="submit_settings">
+            <!-- <br><br> Update Email
             <input type="text" name="email" value="" placeholder="Email">
             <input class="btn" type="submit" value="Update Email" name="submit_email">
             <br><br>Update Phone Number
             <input type="text" name="phone" value="" placeholder="Phone nUmber">
-            <input class="btn" type="submit" value="Update Phone Number" name="submit_phone">
+            <input class="btn" type="submit" value="Update Phone Number" name="submit_phone"> -->
         </form>
     </div>
 

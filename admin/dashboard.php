@@ -18,6 +18,7 @@
 			</div>
 		<?php endif ?>
 	</div>
+
 	<div class="container dashboard">
 		<h1>Welcome</h1>
 		<div class="stats">
@@ -33,12 +34,6 @@
 				<span>43</span> <br>
 				<span>Published comments</span>
 			</a>
-		</div>
-		<br><br><br>
-		<div class="buttons">
-			<a href="users.php">Add Users</a>
-			<a href="posts.php">Add Posts</a>
-			<a href="settings.php">Settings</a>
 		</div>
 	</div>
 </body>

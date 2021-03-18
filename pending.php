@@ -3,8 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Defining variables for SEO -->
 	<meta charset="UTF-8">
-	<title>Qozeem's Blog | Password Reset </title>
+	<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+	<?php $pageTitle="Qozeem Blog | Password Reset Pending"?>
+	<?php  include('includes/head_section.php'); ?>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="static/css/public_styling.css">
 </head>

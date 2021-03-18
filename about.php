@@ -1,6 +1,6 @@
 <?php require_once('config.php') ?>
 
-<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports."?>
 <?php $pageTitle="Qozeem Blog | About Me"?>
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
 </head>

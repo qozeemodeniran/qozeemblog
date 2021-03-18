@@ -5,7 +5,7 @@
 
 <!-- Defining variables for SEO -->
 <?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
-<?php $pageTitle="Qozeem Blog"?>
+<?php $pageTitle="Qozeem's Blog"?>
 <?php include('includes/head_section.php'); ?>
 <?php 
 	// Get posts under a particular topic
@@ -28,7 +28,7 @@
 	<hr>
 	<?php foreach ($posts as $post): ?>
 		<div class="post" style="margin-left: 0px;">
-			<img src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="">
+			<img src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="post-image">
 			<a href="single_post.php?post-slug=<?php echo $post['slug']; ?>">
 				<div class="post_info">
 					<h3><?php echo $post['title'] ?></h3>

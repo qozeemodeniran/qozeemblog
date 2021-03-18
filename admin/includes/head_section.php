@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <!-- SEO -->
 <meta charset="UTF-8">
+<meta name="description" content="<?php echo $pageDescription?>">
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Noto+Serif|Tangerine" rel="stylesheet">
 <!-- Font awesome -->
