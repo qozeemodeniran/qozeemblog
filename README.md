@@ -10,7 +10,7 @@
 <p>The following section explains the roles mentioned above in details</p>
 
 <p>
-<h2>The Admin User</h2> <br>
+<h2>The Admin User</h2>
 The admin user is a type of user with overall rights. He/She can do anything on the blog. <br>Here are some highlighted things the admin is capable of doing on the blog. <br> The admin user can...
 <ul>
     <li>Can create, delete, and update other users</li>
@@ -23,7 +23,7 @@ The admin user is a type of user with overall rights. He/She can do anything on 
 </p>
 
 <p>
-<h2>The Author/Writer User</h2> <br>
+<h2>The Author/Writer User</h2>
 The author user is a user that is charged with a major responsiblity of creating a blog post. He/She can login on the site and create a blog post/article, then wiat for approval from the admin user. <br> The author/writer user can...
 <ul>
     <li>Can create, read, delete and update a blog post</li>
