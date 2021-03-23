@@ -1,6 +1,11 @@
 
 <?php  include('../config.php'); ?>
 	<?php include(ROOT_PATH . '/admin/includes/admin_functions.php'); ?>
+	<?php 
+	// Get all admin users from DB
+	$admins = getAdminUsers();
+	$roles = ['Admin'];				
+    ?>
 	<?php include(ROOT_PATH . '/admin/includes/head_section.php'); ?>
 	<title>Admin | Dashboard</title>
 </head>
@@ -36,5 +41,10 @@
 			</a>
 		</div>
 	</div>
+
+    <div class="content container">
+        <!-- Left side menu -->
+		<?php include(ROOT_PATH . '/admin/includes/menu.php') ?>
+    </div>
 </body>
 </html>

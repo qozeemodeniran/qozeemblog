@@ -46,11 +46,11 @@ th { text-align: center;}
 .header {
 	padding: 15px 45px;
 	font-family: 'Noto Serif', serif;
-	color: greenyellow;
+	color: yellow;
 	background: black;
 }
 .header .logo { width: 50%; float: left; }
-.header .logo h1 { color: greenyellow; }
+.header .logo h1 { color: yellow; }
 .header .user-info { width: 10%; margin-top: 10px; float: right;}
 .header .logout-btn { color: red; text-decoration: none; }
 .header:after{ content: ""; display: block; clear: both; }

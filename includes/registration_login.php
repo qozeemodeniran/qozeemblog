@@ -50,12 +50,20 @@
 			$_SESSION['user'] = getUserById($reg_user_id);
 
 			// if user is admin, redirect to admin area
-			if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
-				$_SESSION['message'] = "You are now logged in";
+			if ( in_array($_SESSION['user']['role'], ["Admin"])) {
+				$_SESSION['message'] = "You are now logged in as admin";
 				// redirect to admin area
 				header('location: ' . BASE_URL . 'admin/dashboard.php');
+				exit(0); 
+			} 
+			// if user is author, redirect to author area
+			elseif (in_array($_SESSION['user']['role'], ["Author"])) {
+				$_SESSION['message'] = "You are now logged in as author";
+				// redirect to author area
+				header('location: ' . BASE_URL . 'author/dashboard.php');
 				exit(0);
-			} else {
+			}
+			else {
 				$_SESSION['message'] = "You are now logged in";
 				// redirect to public area
 				header('location: index.php');				
@@ -84,12 +92,20 @@
 				$_SESSION['user'] = getUserById($reg_user_id); 
 
 				// if user is admin, redirect to admin area
-				if ( in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
+				if ( in_array($_SESSION['user']['role'], ["Admin"])) {
 					$_SESSION['message'] = "You are now logged in";
 					// redirect to admin area
 					header('location: ' . BASE_URL . '/admin/dashboard.php');
 					exit(0);
-				} else {
+				}
+				// if user is author, redirect to author area
+				elseif (in_array($_SESSION['user']['role'], ["Author"])){
+					$_SESSION['message'] = "You are now logged in as author";
+					// redirect to author area
+					header('location: ' . BASE_URL . 'author/dashboard.php');
+					exit(0);
+				}				
+				else {
 					$_SESSION['message'] = "You are now logged in";
 					// redirect to public area
 					header('location: index.php');				

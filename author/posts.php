@@ -1,20 +1,19 @@
-
 <?php  include('../config.php'); ?>
-<?php  include(ROOT_PATH . '/admin/includes/admin_functions.php'); ?>
-<?php  include(ROOT_PATH . '/admin/includes/post_functions.php'); ?>
-<?php include(ROOT_PATH . '/admin/includes/head_section.php'); ?>
+<?php  include(ROOT_PATH . '/author/includes/author_functions.php'); ?>
+<?php  include(ROOT_PATH . '/author/includes/post_functions.php'); ?>
+<?php include(ROOT_PATH . '/author/includes/head_section.php'); ?>
 
 <!-- Get all admin posts from DB -->
 <?php $posts = getAllPosts(); ?>
-	<title>Admin | Manage Posts</title>
+	<title>Author | Manage Posts</title>
 </head>
 <body>
-	<!-- admin navbar -->
-	<?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
+	<!-- author navbar -->
+	<?php include(ROOT_PATH . '/author/includes/navbar.php') ?>
 
 	<div class="container content">
 		<!-- Left side menu -->
-		<?php include(ROOT_PATH . '/admin/includes/menu.php') ?>
+		<?php include(ROOT_PATH . '/author/includes/menu.php') ?>
 
 		<!-- Display records from DB-->
 		<div class="table-div"  style="width: 80%;">
@@ -28,7 +27,7 @@
 						<thead>
 						<th>N</th>
 						<th>Title</th>
-						<th>Author's Name</th>
+						<th>Author's ID | Username</th>
 						<th>Views</th>
 						<!-- Only Admin can publish/unpublish post -->
 						<?php if ($_SESSION['user']['role'] == "Admin"): ?>
