@@ -27,7 +27,7 @@
 						<thead>
 						<th>N</th>
 						<th>Title</th>
-						<th>Author's ID | Username</th>
+						<th>Author's ID | Username | Role</th>
 						<th>Views</th>
 						<!-- Only Admin can publish/unpublish post -->
 						<?php if ($_SESSION['user']['role'] == "Admin"): ?>
@@ -47,7 +47,7 @@
 									<?php echo $post['title']; ?>	
 								</a>
 							</td>
-							<td><?php echo $post['user_id'] . " | " . $post['author_username'];?></td>
+							<td style="text-align: center;"><?php echo $post['user_id'] . " | " . $post['author_username'] . " | " . $post['author_role'];?></td>
 							<td>	
 								<?php echo $post['views'];?>
 							</td>

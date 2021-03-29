@@ -11,6 +11,7 @@ $featured_image = "";
 $post_topic = "";
 $user_id = "";
 $author_username = "";
+$author_role = "";
 
 /* - - - - - - - - - - 
 -  Post functions
@@ -41,7 +42,7 @@ function getPostAuthorById($user_id)
 {
 	global $conn;
 	// $sql = "SELECT username FROM users WHERE id=$user_id";
-	$sql = "SELECT author_username FROM posts WHERE id=$user_id";
+	$sql = "SELECT author_username, author_role FROM posts WHERE id=$user_id";
 	$result = mysqli_query($conn, $sql);
 	if ($result) {
 		// return $username;
@@ -83,6 +84,7 @@ function createPost($request_values)
 		$body = htmlentities(esc($request_values['body']));
 		$user_id = $_SESSION['user']['id']; //newly added
 		$author_username = $_SESSION['user']['username']; //newly added
+		$author_role = $_SESSION['user']['role']; //newly added
 		if (isset($request_values['topic_id'])) {
 			$topic_id = esc($request_values['topic_id']);
 		}
@@ -96,13 +98,13 @@ function createPost($request_values)
 		if (empty($body)) { array_push($errors, "Post body is required"); }
 		if (empty($topic_id)) { array_push($errors, "Post topic is required"); }
 		// Get image name
-	  	$featured_image = $_FILES['featured_image']['name'];
-	  	if (empty($featured_image)) { array_push($errors, "Featured image is required"); }
+	  	// $featured_image = $_FILES['featured_image']['name'];
+	  	// if (empty($featured_image)) { array_push($errors, "Featured image is required"); }
 	  	// image file directory
-	  	$target = "../static/images/" . basename($featured_image);
-	  	if (!move_uploaded_file($_FILES['featured_image']['tmp_name'], $target)) {
-	  		array_push($errors, "Failed to upload image. Please check file settings for your server");
-	  	}
+	  	// $target = "../static/images/" . basename($featured_image);
+	  	// if (!move_uploaded_file($_FILES['featured_image']['tmp_name'], $target)) {
+	  	// 	array_push($errors, "Failed to upload image. Please check file settings for your server");
+	  	// }
 		// Ensure that no post is saved twice. 
 		$post_check_query = "SELECT * FROM posts WHERE slug='$post_slug' LIMIT 1";
 		$result = mysqli_query($conn, $post_check_query);
@@ -112,7 +114,7 @@ function createPost($request_values)
 		}
 		// create post if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "INSERT INTO posts (user_id, author_username, title, slug, image, body, published, created_at, updated_at) VALUES('$user_id', '$author_username', '$title', '$post_slug', '$featured_image', '$body', $published, now(), now())";
+			$query = "INSERT INTO posts (user_id, author_username, author_role, title, slug, image, body, published, created_at, updated_at) VALUES('$user_id', '$author_username', '$author_role', '$title', '$post_slug', '$featured_image', '$body', $published, now(), now())";
 			if(mysqli_query($conn, $query)){ // if post created successfully
 				$inserted_post_id = mysqli_insert_id($conn);
 				// create relationship between post and topic
@@ -133,19 +135,20 @@ function createPost($request_values)
 	* * * * * * * * * * * * * * * * * * * * * */
 	function editPost($role_id)
 	{
-		global $conn, $title, $post_slug, $body, $published, $isEditingPost, $post_id;
+		global $conn, $title, $post_slug, $body, $featured_image, $published, $isEditingPost, $post_id;
 		$sql = "SELECT * FROM posts WHERE id=$role_id LIMIT 1";
 		$result = mysqli_query($conn, $sql);
 		$post = mysqli_fetch_assoc($result);
 		// set form values on the form to be updated
 		$title = $post['title'];
 		$body = $post['body'];
+		$featured_image = $post['image'];
 		$published = $post['published'];
 	}
 
 	function updatePost($request_values)
 	{
-		global $conn, $errors, $post_id, $title, $featured_image, $topic_id, $body, $published;
+		global $conn, $errors, $post_id, $title, $topic_id, $body, $published, $featured_image;
 
 		$title = esc($request_values['title']);
 		$body = esc($request_values['body']);
@@ -167,6 +170,8 @@ function createPost($request_values)
 		  	if (!move_uploaded_file($_FILES['featured_image']['tmp_name'], $target)) {
 		  		array_push($errors, "Failed to upload image. Please check file settings for your server");
 		  	}
+		}else{
+			$featured_image = $post['image'];
 		}
 
 		// register topic if there are no errors in the form
@@ -213,6 +218,25 @@ if (isset($_GET['publish']) || isset($_GET['unpublish'])) {
 	}
 	togglePublishPost($post_id, $message);
 }
+
+// send a notification mail to author if post is accepted or rejected
+if(isset($_POST['publish'])){
+	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	
+  	// ensure that the user exists on our system
+  	$query = "SELECT email FROM users WHERE email='$email'";
+  	$results = mysqli_query($conn, $query);
+	  
+	// sending a mail notification to authors
+	$to = $email;
+	$subject = "Your Post has been published";
+	$msg = "Congratulations!!! Your post has been recently published on qozeemblog. It will now be visible to our viewers.";
+	$msg = wordwrap($msg, 100); 
+	$headers =  "From: info@qozeemblog.com";
+	mail($to, $subject, $msg, $headers);
+    header('location: ' . BASE_URL . '/single_post.php?email=' . $email);
+}
+
 // delete blog post
 function togglePublishPost($post_id, $message)
 {

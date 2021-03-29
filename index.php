@@ -32,20 +32,20 @@
 			<!-- more content still to come here ... -->
 			<?php foreach ($posts as $post): ?>
 			<div class="post" style="margin-left: 0px;">
-			<img src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="post-image">
+			<!-- <img src="< echo BASE_URL . '/static/images/' . $post['image']; ?>" class="post_image" alt="post-image"> -->
 
 			<!-- if statement that displays the topic -->
 			<?php if (isset($post['topic']['name'])): ?>
 			<a 
 				href="<?php echo BASE_URL . 'filtered_posts.php?topic=' . $post['topic']['id'] ?>"
-				class="btn category">
+				class="btn category" style="margin-top: -5px;">
 				<?php echo $post['topic']['name'] ?>
 			</a>
 			<?php endif ?>
 			<!-- // if statement that displays the topic -->
 
 			<a href="single_post.php?post-slug=<?php echo $post['slug']; ?>">
-				<div class="post_info">
+				<div class="post_info" style="margin-top: 50px;">
 					<h3><?php echo $post['title'] ?></h3>
 				<div class="info">
 					<span>Posted on: <?php echo date("F j, Y ", strtotime($post["created_at"])); ?></span>
@@ -57,6 +57,6 @@
 			<?php endforeach ?>
 		</div>
 		<!-- // Page content -->
-
+		
 <!-- footer -->
-<?php include( ROOT_PATH . '/includes/footer.php') ?>
+ <?php include( ROOT_PATH . '/includes/footer.php') ?>
