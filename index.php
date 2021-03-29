@@ -10,7 +10,7 @@
 <?php $posts = getPublishedPosts(); ?>
 
 <!-- Defining variables for SEO -->
-<?php $pageDescription="Visit http://qozeem.blog to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
+<?php $pageDescription="Visit https://qozeemblog.herokuapp.com to get the most latest and relevant stories on Inspiration, Motivation, Business, Tech, News, and Sports"?>
 <?php $pageTitle="Qozeem Blog | Home" ?>
 <?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
 </head>

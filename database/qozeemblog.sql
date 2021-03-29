@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2021 at 07:58 PM
+-- Generation Time: Mar 29, 2021 at 03:43 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -58,6 +58,7 @@ CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `author_username` varchar(256) NOT NULL,
+  `author_role` varchar(256) NOT NULL,
   `title` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
   `views` int(11) NOT NULL DEFAULT 0,
@@ -72,9 +73,12 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `user_id`, `author_username`, `title`, `slug`, `views`, `image`, `body`, `published`, `created_at`, `updated_at`) VALUES
-(180, 104, 'qodeniran', 'Author Post', 'author-post', 0, '159231466_2812713948947260_7001059427467320503_o.jpg', '&lt;p&gt;Testing author post&lt;/p&gt;\r\n', 0, '2021-03-23 18:36:50', '2021-03-23 18:36:50'),
-(181, 103, 'qozeemodeniran', 'Admin Post', 'admin-post', 0, '159892197_2812715612280427_6895926467767786445_o.jpg', 'This post is created by an admin', 0, '2021-03-23 18:57:51', '2021-03-23 18:57:51');
+INSERT INTO `posts` (`id`, `user_id`, `author_username`, `author_role`, `title`, `slug`, `views`, `image`, `body`, `published`, `created_at`, `updated_at`) VALUES
+(184, 103, 'qozeemodeniran', 'Admin', 'Admin\'s Post', 'admin-s-post', 0, '', '<p>This post is made by an admin user</p>\r\n', 1, '2021-03-29 10:34:20', '2021-03-29 10:34:17'),
+(183, 104, 'qodeniran', 'Author', 'Author\'s Post', 'author-s-post', 0, 'logo.png', '<p>This post is made by an author user for testing sake.</p>\r\n', 1, '2021-03-29 13:22:27', '2021-03-24 17:59:08'),
+(187, 103, 'qozeemodeniran', 'Admin', 'Test', 'test', 0, '', '<p>Testing image if it exists. Okay, let&#39;s see if this works</p>\r\n', 1, '2021-03-25 08:29:21', '2021-03-25 08:26:40'),
+(188, 103, 'qozeemodeniran', 'Admin', 'Test post', 'test-post', 0, '', '&lt;p&gt;Post without image&lt;/p&gt;\r\n', 1, '2021-03-29 10:40:57', '2021-03-29 10:40:57'),
+(189, 105, 'qozeemodeniran2', 'Author', 'Test post 2', 'test-post-2', 0, '', '&lt;p&gt;Post without image&lt;/p&gt;\r\n', 1, '2021-03-29 10:56:28', '2021-03-29 10:56:15');
 
 -- --------------------------------------------------------
 
@@ -122,7 +126,15 @@ INSERT INTO `post_topic` (`id`, `post_id`, `topic_id`) VALUES
 (NULL, 178, 5),
 (NULL, 179, 5),
 (NULL, 180, 5),
-(NULL, 181, 5);
+(NULL, 181, 5),
+(NULL, 182, 5),
+(NULL, 183, 5),
+(NULL, 184, 5),
+(NULL, 185, 5),
+(NULL, 186, 5),
+(NULL, 187, 5),
+(NULL, 188, 5),
+(NULL, 189, 5);
 
 -- --------------------------------------------------------
 
@@ -170,7 +182,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `role`, `password`, `created_at`, `updated_at`) VALUES
 (103, 'qozeemodeniran', 'qozeemodeniran@gmail.com', 'Admin', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-10 10:15:11', '2021-03-10 10:15:11'),
-(104, 'qodeniran', 'muhdqozeem@gmail.com', 'Author', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-19 09:48:50', '2021-03-19 09:48:50');
+(104, 'qodeniran', 'muhdqozeem@gmail.com', 'Author', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-19 09:48:50', '2021-03-19 09:48:50'),
+(105, 'qozeemodeniran2', 'odeolabanji@hotmail.com', 'Author', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-29 10:27:34', '2021-03-29 10:27:34');
 
 --
 -- Indexes for dumped tables
@@ -216,13 +229,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
