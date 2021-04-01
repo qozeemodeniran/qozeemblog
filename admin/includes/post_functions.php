@@ -12,6 +12,7 @@ $post_topic = "";
 $user_id = "";
 $author_username = "";
 $author_role = "";
+$keywords = "";
 
 /* - - - - - - - - - - 
 -  Post functions
@@ -79,9 +80,10 @@ if (isset($_GET['delete-post'])) {
 - - - - - - - - - - -*/
 function createPost($request_values)
 	{
-		global $conn, $errors, $title, $featured_image, $topic_id, $body, $published;
+		global $conn, $errors, $title, $featured_image, $topic_id, $body, $keywords, $published;
 		$title = esc($request_values['title']);
 		$body = htmlentities(esc($request_values['body']));
+		$keywords = htmlentities(esc($request_values['keywords'])); //newly added
 		$user_id = $_SESSION['user']['id']; //newly added
 		$author_username = $_SESSION['user']['username']; //newly added
 		$author_role = $_SESSION['user']['role']; //newly added
@@ -114,7 +116,7 @@ function createPost($request_values)
 		}
 		// create post if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "INSERT INTO posts (user_id, author_username, author_role, title, slug, image, body, published, created_at, updated_at) VALUES('$user_id', '$author_username', '$author_role', '$title', '$post_slug', '$featured_image', '$body', $published, now(), now())";
+			$query = "INSERT INTO posts (user_id, author_username, author_role, title, slug, image, body, keywords, published, created_at, updated_at) VALUES('$user_id', '$author_username', '$author_role', '$title', '$post_slug', '$featured_image', '$body', '$keywords', $published, now(), now())";
 			if(mysqli_query($conn, $query)){ // if post created successfully
 				$inserted_post_id = mysqli_insert_id($conn);
 				// create relationship between post and topic
@@ -135,23 +137,25 @@ function createPost($request_values)
 	* * * * * * * * * * * * * * * * * * * * * */
 	function editPost($role_id)
 	{
-		global $conn, $title, $post_slug, $body, $featured_image, $published, $isEditingPost, $post_id;
+		global $conn, $title, $post_slug, $body, $keywords, $featured_image, $published, $isEditingPost, $post_id;
 		$sql = "SELECT * FROM posts WHERE id=$role_id LIMIT 1";
 		$result = mysqli_query($conn, $sql);
 		$post = mysqli_fetch_assoc($result);
 		// set form values on the form to be updated
 		$title = $post['title'];
 		$body = $post['body'];
+		$keywords = $post['keywords'];
 		$featured_image = $post['image'];
 		$published = $post['published'];
 	}
 
 	function updatePost($request_values)
 	{
-		global $conn, $errors, $post_id, $title, $topic_id, $body, $published, $featured_image;
+		global $conn, $errors, $post_id, $title, $topic_id, $body, $keywords, $published, $featured_image;
 
 		$title = esc($request_values['title']);
 		$body = esc($request_values['body']);
+		$keywords = esc($request_values['keywords']);
 		$post_id = esc($request_values['post_id']);
 		if (isset($request_values['topic_id'])) {
 			$topic_id = esc($request_values['topic_id']);
@@ -176,7 +180,7 @@ function createPost($request_values)
 
 		// register topic if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "UPDATE posts SET title='$title', slug='$post_slug', views=0, image='$featured_image', body='$body', published=$published, updated_at=now() WHERE id=$post_id";
+			$query = "UPDATE posts SET title='$title', slug='$post_slug', views=0, image='$featured_image', body='$body', keywords='$keywords', published=$published, updated_at=now() WHERE id=$post_id";
 			// attach topic to post on post_topic table
 			if(mysqli_query($conn, $query)){ // if post created successfully
 				if (isset($topic_id)) {
@@ -234,7 +238,7 @@ if(isset($_POST['publish'])){
 	$msg = wordwrap($msg, 100); 
 	$headers =  "From: info@qozeemblog.com";
 	mail($to, $subject, $msg, $headers);
-    header('location: ' . BASE_URL . '/single_post.php?email=' . $email);
+    header("location: posts.php");
 }
 
 // delete blog post

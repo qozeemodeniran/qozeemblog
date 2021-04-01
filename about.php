@@ -14,21 +14,28 @@
 
 <!-- Page Content -->
 <div class="content">
-<h1 class="btn" style="text-align: center;">About Me</h1>
+<h1 class="btn" style="text-align: center; width: 100%; font-size: 200%;">About Me</h1><br><br>
 <section class="half">
 	<div class="container">
 		<div class="post_info">
-			<img src="/static/./images/./blueshirt.jpg" alt="qozeem-odeniran" srcset="" style="border-radius: 10px;">
+			<img src="/static/./images/./blueshirt.jpg" alt="qozeem-odeniran" srcset="" style="border-radius: 10px; max-height: 700px;">
 		</div>
 	</div>
 </section>
 
 <section class="half">
-	<div class="container">
-		<div class="post-body-div">
-			I have over 6 years of experience as a software engineer, and have worked at both small startups and large organizations. While I'm a proficient full-stack developer, my expertise is in building scalable backend services (API services, stream processing, and async mechanisms).
+	<div class="">
+		<div class="post-body-div" style="margin-top: -20px;">
+		<p>
+		Experienced FullStack Engineer who is skilled in System Design & Architecture, Backend Engineering, Frontend Engineering, Mobile apps and DevOps. I have written software from the ground up, worked in teams to build amazing products, optimized workflows to increase productivity and managed client relationships.
+		</p>
+		<p>
+		In my current role as a Junior Software, I am responsible for planning, designing, implementing, unit testing and debugging applications. I am also responsible for working with a team consisting of infrastructure Engineers, DevOps Engineers and QA Engineers to build, maintain, scale existing systems and convert Monolithic systems to distributed systems to handle the load from millions of users.
+		</p>
+		<p>
+		I am known for my passion for building great products, out of the box thinking, quick wit, ability to learn anything quickly, being a good team player and an excellent listener, my knack for high quality code that is scalable and testable, clean architecture and my versatility which helps me adapt to almost any role.
+		</p>
 
-			I love building things. While hard engineering problems are often intrinsically fun to tackle, I'm most attracted to solving real customer problems with a business justification. I'm looking for a senior individual contributor role where I can take on on collaborative team leadership responsibilites, and gain experience with architecture and project management.
 		</div>
 	</div> 
 </section>
@@ -60,7 +67,7 @@
 			I live in the Pacific Northwest, home of some of the greatest mountains and trails in the country. I enjoy spending weekends on scrambles and getting lost in the woods.
 		</details>
 </section>
-</div>
+</div><br><br>
 
 <!-- footer -->
 <?php include( ROOT_PATH . '/includes/footer.php') ?>

@@ -26,7 +26,7 @@
 
 <!-- Page Content -->
 <div class="content">
-	<h1 class="btn" style="text-align: center; width: 100%;">Meet Our Team</h1><br><br>
+	<h1 class="btn" style="text-align: center; width: 100%; font-size: 200%;">Meet Our Team</h1><br><br>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-12">

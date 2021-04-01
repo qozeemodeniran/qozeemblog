@@ -28,6 +28,7 @@
 					<input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
 				<?php endif ?>
 
+				<input type="text" name="keywords" value="<?php echo $keywords; ?>" placeholder="Keywords (separate entries with comma)">
 				<input type="text" name="title" value="<?php echo $title; ?>" placeholder="Title">
 				<!-- <label style="float: left; margin: 5px auto 5px;">Featured image</label>
 				<input type="file" name="featured_image" value="< echo $featured_image; " > -->
