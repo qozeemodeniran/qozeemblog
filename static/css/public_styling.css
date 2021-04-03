@@ -369,8 +369,9 @@ form input:focus {
 	padding: 10px;
 }
 
-
-/* COMMENTS STYLING */
+/*
+* COMMENTS STYLING
+*/
 form button { margin: 5px 0px; }
 textarea { display: block; margin-bottom: 10px; }
 /*post*/
