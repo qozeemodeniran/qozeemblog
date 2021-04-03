@@ -17,6 +17,10 @@
 <!-- Bootstrap Javascript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<!-- Javascript for comments -->
+<script src="static/js/script.js"></script>
+
+
 <!-- SEO -->
 <meta charset="UTF-8">
 <meta name="description" content="<?php echo $pageDescription?>">
