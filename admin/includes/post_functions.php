@@ -208,11 +208,11 @@ function createPost($request_values)
 	}
 
 // if user clicks the publish post button
-if (isset($_GET['publish']) || isset($_GET['unpublish'])) {
+if (isset($_GET['published']) || isset($_GET['unpublish'])) {
 	$message = "";
-	if (isset($_GET['publish'])) {
+	if (isset($_GET['published'])) {
 		$message = "Post published successfully";
-		$post_id = $_GET['publish'];
+		$post_id = $_GET['published'];
 	} else if (isset($_GET['unpublish'])) {
 		$message = "Post successfully unpublished";
 		$post_id = $_GET['unpublish'];
