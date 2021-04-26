@@ -4,7 +4,7 @@
 	// connect to database
 	// $conn = mysqli_connect("localhost", "root", "", "qozeemblog"); // localhost connection
 
-	$conn = mysqli_connect("us-cdbr-east-03.cleardb.com", "b0e9c3b1eac950", "72c5172d", "heroku_bff38edda0e11e9"); //mysql workspace connection (for heroku)
+	$conn = mysqli_connect("us-cdbr-east-03.cleardb.com", "b3517ce3da674a", "608391b2", "heroku_c54e62c766ebe15"); //mysql workspace connection (for heroku)
 
 	// $conn = mysqli_connect("sql301.byethost32.com", "b32_27687645", "lastborn231", "b32_27687645_qozeemblog"); // byethost
 
