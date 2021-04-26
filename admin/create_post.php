@@ -42,6 +42,7 @@
 				
 				<!-- Only admin users can view publish input field -->
 				<?php if ($_SESSION['user']['role'] == "Admin"): ?>
+				
 					<!-- display checkbox according to whether post has been published or not -->
 					<?php if ($published == true): ?>
 						<label for="publish">
