@@ -208,11 +208,11 @@ function createPost($request_values)
 	}
 
 // if user clicks the publish post button
-if (isset($_GET['published']) || isset($_GET['unpublish'])) {
+if (isset($_GET['publish']) || isset($_GET['unpublish'])) {
 	$message = "";
-	if (isset($_GET['published'])) {
+	if (isset($_GET['publish'])) {
 		$message = "Post published successfully";
-		$post_id = $_GET['published'];
+		$post_id = $_GET['publish'];
 	} else if (isset($_GET['unpublish'])) {
 		$message = "Post successfully unpublished";
 		$post_id = $_GET['unpublish'];
@@ -220,23 +220,23 @@ if (isset($_GET['published']) || isset($_GET['unpublish'])) {
 	togglePublishPost($post_id, $message);
 }
 
-// send a notification mail to author if post is accepted or rejected
-if(isset($_POST['publish'])){
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
+// // send a notification mail to author if post is accepted or rejected
+// if(isset($_POST['publish'])){
+// 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	
-  	// ensure that the user exists on our system
-  	$query = "SELECT email FROM users WHERE email='$email'";
-  	$results = mysqli_query($conn, $query);
+//   	// ensure that the user exists on our system
+//   	$query = "SELECT email FROM users WHERE email='$email'";
+//   	$results = mysqli_query($conn, $query);
 	  
-	// sending a mail notification to authors
-	$to = $email;
-	$subject = "Your Post has been published";
-	$msg = "Congratulations!!! Your post has been recently published on qozeemblog. It will now be visible to our viewers.";
-	$msg = wordwrap($msg, 100); 
-	$headers =  "From: info@qozeemblog.com";
-	mail($to, $subject, $msg, $headers);
-    header("location: posts.php");
-}
+// 	// sending a mail notification to authors
+// 	$to = $email;
+// 	$subject = "Your Post has been published";
+// 	$msg = "Congratulations!!! Your post has been recently published on qozeemblog. It will now be visible to our viewers.";
+// 	$msg = wordwrap($msg, 100); 
+// 	$headers =  "From: info@qozeemblog.com";
+// 	mail($to, $subject, $msg, $headers);
+//     header("location: posts.php");
+// }
 
 // delete blog post
 function togglePublishPost($post_id, $message)
