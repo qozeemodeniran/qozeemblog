@@ -58,11 +58,11 @@
 								<td>
 								<?php if ($post['published'] == true): ?>
 									<a class="fa fa-check btn unpublish"
-										href="posts.php?unpublish=<?php echo $post['id'] ?>">
+										href="<?php echo BASE_URL . 'posts.php?unpublish=' .$post['id'] ?>">
 									</a>
 								<?php else: ?>
 									<a class="fa fa-times btn publish"
-										href="posts.php?publish=<?php echo $post['id'] ?>">
+										href="<?php echo BASE_URL . 'posts.php?publish=' .$post['id'] ?>">
 									</a>
 								<?php endif ?>
 								</td>
