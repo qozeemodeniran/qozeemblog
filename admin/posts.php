@@ -58,15 +58,15 @@
 								<td>
 								<?php if ($post['published'] == true): ?>
 									<a class="fa fa-check btn unpublish"
-										href="posts.php?unpublish=<?php echo $post['id'] ?>">
+										href="posts.php?unpublish=<?php echo $post['id']; ?>">
 									</a>
 								<?php else: ?>
 									<a class="fa fa-times btn publish"
-										href="posts.php?publish=<?php echo $post['id'] ?>">
+										href="posts.php?publish=<?php echo $post['id']; ?>">
 									</a>
-								<?php endif ?>
+								<?php endif; ?>
 								</td>
-							<?php endif ?>
+							<?php endif; ?>
 
 							<td>
 								<a class="fa fa-pencil btn edit"
