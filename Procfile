@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 qozeemblog/
+web: vendor/bin/heroku-php-apache2
