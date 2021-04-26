@@ -57,6 +57,5 @@
 			<?php endforeach ?>
 		</div>
 		<!-- // Page content -->
-		
 <!-- footer -->
- <?php include( ROOT_PATH . '/includes/footer.php') ?>
+<?php include( ROOT_PATH . '/includes/footer.php') ?>

@@ -18,11 +18,20 @@ hr { margin: 10px 0px; opacity: .25; }
 
 /* ABOUT PAGE IMAGE POSITIONING */
 .half{
+	display: inline-block;
 	width: 45%;
+	/* width: 45%;
 	height: 100%;
 	display: inline-block;
-	margin-right: 2%;
-	float: left;
+	margin-right: 2%; */
+}
+
+section#img.half {
+	margin-right: 9%;
+}
+
+section#abt.half {
+	
 }
 
 .whole{
@@ -115,16 +124,28 @@ form input:focus {
 
 /* FOOTER */
 .footer {
-  position: absolute;
+	color: white;
+	text-align: center;
+	background-color: #73707D;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-right: 7%;
+	margin-left: 7%;
+	font-size: 30px;
+	border-radius: 10% 10% 0% 0%;
+
+  /* position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   color: white;
   background-color: #73707D;
   text-align: center;
-  width: 80%;
+  width: 85%;
   margin: 20px auto 0px;
-  padding: 20px 0px;
+  padding: 20px 0px; */
 }
 
 /* LOGO: Public Area logo */

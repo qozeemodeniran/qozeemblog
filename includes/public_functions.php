@@ -108,8 +108,8 @@ function getAllTopics()
 	$post = mysqli_fetch_assoc($post_query_result);
 
 	// Get all comments from database
-	$comments_query_result = mysqli_query($conn, "SELECT * FROM comments WHERE post_id=" . $post['id'] . " ORDER BY created_at DESC");
-	$comments = mysqli_fetch_all($comments_query_result, MYSQLI_ASSOC);
+	// $comments_query_result = mysqli_query($conn, "SELECT * FROM comments WHERE post_id=" . $post['id'] . " ORDER BY created_at DESC");
+	// $comments = mysqli_fetch_all($comments_query_result, MYSQLI_ASSOC);
 
 	// Receives a user id and returns the username
 	function getUsernameById($id)
