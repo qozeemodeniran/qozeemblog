@@ -162,6 +162,7 @@ function createPost($request_values)
 
 		if (empty($title)) { array_push($errors, "Post title is required"); }
 		if (empty($body)) { array_push($errors, "Post body is required"); }
+		
 		// if new featured image has been provided
 		if (isset($_POST['featured_image'])) {
 			// Get image name

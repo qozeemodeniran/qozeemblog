@@ -57,11 +57,11 @@
 							<?php if ($_SESSION['user']['role'] == "Admin" ): ?>
 								<td>
 								<?php if ($post['published'] == true): ?>
-									<a class="fa fa-check btn unpublish"
+									<a class="fa fa-check btn unpublish" aria-label="unpublish"
 										href="posts.php?unpublish=<?php echo $post['id'] ?>">
 									</a>
 								<?php else: ?>
-									<a class="fa fa-times btn publish"
+									<a class="fa fa-times btn publish" aria-label="publish"
 										href="posts.php?publish=<?php echo $post['id'] ?>">
 									</a>
 								<?php endif ?>
