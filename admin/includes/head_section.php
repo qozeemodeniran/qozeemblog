@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <!-- SEO -->
 <meta charset="UTF-8">
 <meta name="description" content="<?php echo $pageDescription?>">
 <meta name="seo" content="<?php echo $keywords ?>">  
