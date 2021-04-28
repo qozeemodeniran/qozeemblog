@@ -69,12 +69,12 @@
 							<?php endif ?>
 
 							<td>
-								<a class="fa fa-pencil btn edit"
+								<a class="fa fa-pencil btn edit" aria-label="edit"
 									href="create_post.php?edit-post=<?php echo $post['id'] ?>">
 								</a>
 							</td>
 							<td>
-								<a  class="fa fa-trash btn delete" 
+								<a  class="fa fa-trash btn delete" aria-label="delete"
 									href="create_post.php?delete-post=<?php echo $post['id'] ?>">
 								</a>
 							</td>
