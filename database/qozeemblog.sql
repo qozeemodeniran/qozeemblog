@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2021 at 12:27 PM
+-- Generation Time: Apr 28, 2021 at 01:23 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -76,7 +76,7 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`id`, `user_id`, `author_username`, `author_role`, `title`, `slug`, `views`, `image`, `body`, `keywords`, `published`, `created_at`, `updated_at`) VALUES
 (190, 104, 'qodeniran', 'Author', 'Author\'s Post', 'author-s-post', 0, '', '&lt;p&gt;This is a post from the author.&lt;br /&gt;\r\nIt was ceated for the purpose of testing for keywords.&lt;/p&gt;\r\n', 'testing, keywords, post', 1, '2021-04-28 10:26:39', '2021-04-28 10:25:09'),
-(191, 103, 'qozeemodeniran', 'Admin', 'Admin\'s Post', 'admin-s-post', 0, '', '&lt;p&gt;This is a post from the admin.&lt;br /&gt;\r\nI am using it to test for keywords functionalities.&amp;nbsp;&lt;/p&gt;\r\n', 'test, admin, post, keywords', 1, '2021-04-28 10:26:41', '2021-04-28 10:26:25');
+(191, 103, 'qozeemodeniran', 'Admin', 'Admin\'s Post', 'admin-s-post', 0, '', '&lt;p&gt;This is a post from the admin.&lt;br /&gt;\r\nI am using it to test for keywords functionalities.&amp;nbsp;&lt;/p&gt;\r\n', 'test, admin, post, keywords', 1, '2021-04-28 11:21:11', '2021-04-28 10:26:25');
 
 -- --------------------------------------------------------
 
