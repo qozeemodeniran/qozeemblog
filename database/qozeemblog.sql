@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2021 at 03:43 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Generation Time: Apr 28, 2021 at 12:27 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -64,6 +64,7 @@ CREATE TABLE `posts` (
   `views` int(11) NOT NULL DEFAULT 0,
   `image` varchar(255) NOT NULL,
   `body` text NOT NULL,
+  `keywords` text DEFAULT NULL,
   `published` tinyint(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
@@ -73,12 +74,9 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `user_id`, `author_username`, `author_role`, `title`, `slug`, `views`, `image`, `body`, `published`, `created_at`, `updated_at`) VALUES
-(184, 103, 'qozeemodeniran', 'Admin', 'Admin\'s Post', 'admin-s-post', 0, '', '<p>This post is made by an admin user</p>\r\n', 1, '2021-03-29 10:34:20', '2021-03-29 10:34:17'),
-(183, 104, 'qodeniran', 'Author', 'Author\'s Post', 'author-s-post', 0, 'logo.png', '<p>This post is made by an author user for testing sake.</p>\r\n', 1, '2021-03-29 13:22:27', '2021-03-24 17:59:08'),
-(187, 103, 'qozeemodeniran', 'Admin', 'Test', 'test', 0, '', '<p>Testing image if it exists. Okay, let&#39;s see if this works</p>\r\n', 1, '2021-03-25 08:29:21', '2021-03-25 08:26:40'),
-(188, 103, 'qozeemodeniran', 'Admin', 'Test post', 'test-post', 0, '', '&lt;p&gt;Post without image&lt;/p&gt;\r\n', 1, '2021-03-29 10:40:57', '2021-03-29 10:40:57'),
-(189, 105, 'qozeemodeniran2', 'Author', 'Test post 2', 'test-post-2', 0, '', '&lt;p&gt;Post without image&lt;/p&gt;\r\n', 1, '2021-03-29 10:56:28', '2021-03-29 10:56:15');
+INSERT INTO `posts` (`id`, `user_id`, `author_username`, `author_role`, `title`, `slug`, `views`, `image`, `body`, `keywords`, `published`, `created_at`, `updated_at`) VALUES
+(190, 104, 'qodeniran', 'Author', 'Author\'s Post', 'author-s-post', 0, '', '&lt;p&gt;This is a post from the author.&lt;br /&gt;\r\nIt was ceated for the purpose of testing for keywords.&lt;/p&gt;\r\n', 'testing, keywords, post', 1, '2021-04-28 10:26:39', '2021-04-28 10:25:09'),
+(191, 103, 'qozeemodeniran', 'Admin', 'Admin\'s Post', 'admin-s-post', 0, '', '&lt;p&gt;This is a post from the admin.&lt;br /&gt;\r\nI am using it to test for keywords functionalities.&amp;nbsp;&lt;/p&gt;\r\n', 'test, admin, post, keywords', 1, '2021-04-28 10:26:41', '2021-04-28 10:26:25');
 
 -- --------------------------------------------------------
 
@@ -134,7 +132,9 @@ INSERT INTO `post_topic` (`id`, `post_id`, `topic_id`) VALUES
 (NULL, 186, 5),
 (NULL, 187, 5),
 (NULL, 188, 5),
-(NULL, 189, 5);
+(NULL, 189, 5),
+(NULL, 190, 1),
+(NULL, 191, 4);
 
 -- --------------------------------------------------------
 
@@ -182,8 +182,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `role`, `password`, `created_at`, `updated_at`) VALUES
 (103, 'qozeemodeniran', 'qozeemodeniran@gmail.com', 'Admin', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-10 10:15:11', '2021-03-10 10:15:11'),
-(104, 'qodeniran', 'muhdqozeem@gmail.com', 'Author', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-19 09:48:50', '2021-03-19 09:48:50'),
-(105, 'qozeemodeniran2', 'odeolabanji@hotmail.com', 'Author', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-29 10:27:34', '2021-03-29 10:27:34');
+(104, 'qodeniran', 'muhdqozeem@gmail.com', 'Author', '2c599bc73385c4085f268d8d8a3292b3', '2021-03-19 09:48:50', '2021-03-19 09:48:50');
 
 --
 -- Indexes for dumped tables
@@ -229,7 +228,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=192;
 
 --
 -- AUTO_INCREMENT for table `users`
