@@ -23,7 +23,7 @@
 
 <!-- SEO -->
 <meta charset="UTF-8">
-<meta name="description" content="<?php echo $pageDescription?>">
+<meta name="description" content="<?php echo $description?>">
 <meta name="keywords" content="<?php echo $keywords ?>">  
 <title><?php echo $pageTitle; ?></title>
 

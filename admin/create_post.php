@@ -31,6 +31,7 @@
 				<input type="text" name="keywords" value="<?php echo $keywords; ?>" placeholder="Keywords (separate entries with comma)">
 				<input type="text" name="title" value="<?php echo $title; ?>" placeholder="Title">
 				<textarea name="body" id="body" cols="30" rows="10"><?php echo $body; ?></textarea>
+				<textarea name="description" id="description" cols="30" rows="10" placeholder="Brief description of blog"><?php echo $description; ?></textarea>
 				<select name="topic_id">
 					<option value="" selected disabled>Choose topic</option>
 					<?php foreach ($topics as $topic): ?>

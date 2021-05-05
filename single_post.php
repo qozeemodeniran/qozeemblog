@@ -8,7 +8,7 @@
 ?>
 
 <!-- Defining variables for SEO -->
-<?php $pageDescription = htmlspecialchars($post['body']);?>
+<?php $description = htmlspecialchars($post['description']);?>
 <?php $keywords = htmlspecialchars($post['keywords']); ?>
 <?php $pageTitle = $post['title']; ?>
 <?php include('includes/head_section.php'); ?>

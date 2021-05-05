@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="<?php echo $pageDescription?>">
+<meta name="description" content="<?php echo $description?>">
 <meta name="seo" content="<?php echo $keywords ?>">  
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Noto+Serif|Tangerine" rel="stylesheet">
