@@ -33,6 +33,7 @@
 				<!-- <label style="float: left; margin: 5px auto 5px;">Featured image</label>
 				<input type="file" name="featured_image" value="< echo $featured_image; ?>" > -->
 				<textarea name="body" id="body" cols="30" rows="10"><?php echo $body; ?></textarea>
+				<textarea name="description" id="description" cols="30" rows="10" placeholder="Brief description of blog"><?php echo $description; ?></textarea>
 				<select name="topic_id">
 					<option value="" selected disabled>Choose topic</option>
 					<?php foreach ($topics as $topic): ?>
