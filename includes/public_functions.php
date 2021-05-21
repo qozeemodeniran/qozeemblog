@@ -1,4 +1,3 @@
-
 <?php 
 /* * * * * * * * * * * * * * *
 * Returns all published posts
@@ -98,13 +97,13 @@ function getAllTopics()
  * Comment function
  */
 // Setting logged-in user id...
-$user_id = 103;
+$user_id = 1;
 
 // Database connection
 global $conn;
 
-// Get post with the id 195 from the database
-$post_query_result = mysqli_query($conn, "SELECT * FROM comments WHERE post_id=195");
+// Get post with the id 190 from the database
+$post_query_result = mysqli_query($conn, "SELECT * FROM comments WHERE post_id=1");
 $post = mysqli_fetch_assoc($post_query_result);
 
 // Getting all comments form databse
